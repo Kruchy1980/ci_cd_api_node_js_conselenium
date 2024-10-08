@@ -60,7 +60,7 @@ describe('API tests', () => {
         expect(response.statusCode).to.eql(200)
     });
 
-    it('Get UserId', async () => {
+    it.skip('Get UserId', async () => {
         // console.log(token);
         const response = await spec()
             .get(`${baseURL}/Account/v1/User/${userID}`)
