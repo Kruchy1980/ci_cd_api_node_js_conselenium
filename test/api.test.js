@@ -6,6 +6,7 @@ import {expect} from 'chai';
 describe('API tests', () => {
     it('first test', async () => {
         const response = await spec().get('https://demoqa.com/BookStore/v1/Books');
+        console.log(response.body);
         expect(response.statusCode).to.eql(200); 
     })
 })
