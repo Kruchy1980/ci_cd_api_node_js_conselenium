@@ -1,5 +1,5 @@
 import 'dotenv/config';
 export const baseURL = 'https://demoqa.com' 
-export const userID = 'ef6579bc-d7f1-4c96-bd6d-abaf9fed74da'
+export const userID = 'a6a46800-db29-4fc3-83f5-7fdfad1ad335'
 export const secretPassword = process.env.SECRET_PASSWORD
-export const userName = 'jktest123'
+export const userName = 'enviromnent123'
