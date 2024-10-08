@@ -25,7 +25,7 @@ describe('API tests', () => {
             });
         expect(response.statusCode).to.eql(201);
     });
-    it('Add User', async () => {
+    it.skip('Add User', async () => {
         const response = await spec()
             .post(`${baseURL}/Account/v1/User`)
             .withBody({
@@ -34,7 +34,7 @@ describe('API tests', () => {
             });
         expect(response.statusCode).to.eql(201);
     });
-    it.skip('generate Token', async () => {
+    it('generate Token', async () => {
         const response = await spec()
             .post(`${baseURL}/Account/v1/GenerateToken`)
             // .inspect()
@@ -47,7 +47,7 @@ describe('API tests', () => {
         expect(response.statusCode).to.eql(200)
     });
 
-    it.skip('Authorized', async () => {
+    it('Authorized', async () => {
         // console.log(token);
         const response = await spec()
             .post(`${baseURL}/Account/v1/Authorized`)
@@ -60,7 +60,7 @@ describe('API tests', () => {
         expect(response.statusCode).to.eql(200)
     });
 
-    it.skip('Get UserId', async () => {
+    it('Get UserId', async () => {
         // console.log(token);
         const response = await spec()
             .get(`${baseURL}/Account/v1/User/${userID}`)
@@ -70,7 +70,7 @@ describe('API tests', () => {
         expect(response.statusCode).to.eql(200)
     });
 
-    it.skip('Get All Books', async () => {
+    it('Get All Books', async () => {
         // console.log(token);
         const response = await spec()
             .get(`${baseURL}/Account/v1/User/${userID}`)
@@ -80,7 +80,7 @@ describe('API tests', () => {
         expect(response.statusCode).to.eql(200)
     });
 
-    it.skip('Add The Book', async () => {
+    it('Add The Book', async () => {
         // console.log(token);
         const response = await spec()
             .post(`${baseURL}/BookStore/v1/Books`)
@@ -99,7 +99,7 @@ describe('API tests', () => {
         console.log(bookISBN);
         expect(response.statusCode).to.eql(201)
     });
-    it.skip('Get the book', async () => {
+    it('Get the book', async () => {
         console.log(bookISBN);
         const response = await spec()
             .get(`${baseURL}/BooksStore/v1/Book`)
@@ -112,7 +112,7 @@ describe('API tests', () => {
         expect(response.statusCode).to.eql(200)
     });
 
-    it.skip('Delete the user\s book', async () => {
+    it('Delete the user\s book', async () => {
         console.log(bookISBN);
         const response = await spec()
             .delete(`${baseURL}/BooksStore/v1/Book`)
@@ -125,7 +125,7 @@ describe('API tests', () => {
         console.log(response.body);
         expect(response.statusCode).to.eql(200)
     });
-    it.skip('Delete user books', async () => {
+    it('Delete user books', async () => {
         // console.log(bookISB);
         const response = await spec()
             .delete(`${baseURL}/BooksStore/v1/Books`)
