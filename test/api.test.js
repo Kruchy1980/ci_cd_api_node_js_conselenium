@@ -15,10 +15,10 @@ describe('API tests', () => {
             expect(response.body[0].books[i].author).to.eql("Kyle Simpson");
         }
     });
-    it.skip('first test', async () => {
+    it.skip('User', async () => {
         const response = await spec()
             .post(`${baseURL}/Account/v1/User`)
-            .inspect()
+            // .inspect()
             .withBody({
                 userName: userName,
                 password: secretPassword,
