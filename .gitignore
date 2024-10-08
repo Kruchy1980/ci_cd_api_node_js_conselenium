@@ -131,4 +131,4 @@ dist
 
 # Environment
 .env
-.mochawesome-report
+/mochawesome-report
